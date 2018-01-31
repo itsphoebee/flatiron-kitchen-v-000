@@ -9,7 +9,7 @@ class RecipesController < ApplicationController
   def create
     #raise params.inspect
     @recipe = Recipe.new(recipe_params)
-    binding.pry
+    #binding.pry
     if @recipe.valid?
       @recipe.save
       redirect_to recipe_path(@recipe)
