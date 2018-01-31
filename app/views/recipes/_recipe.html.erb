@@ -4,11 +4,11 @@
 
   Ingredients: <%= f.collection_check_boxes(:ingredient_ids, Ingredient.all, :id, :name)%><br><br>
 
-  <% if !recipe.id.present? %>
+  <!--<% if !recipe.id.present? %>
     <%= f.fields_for :ingredients do |ingredient_fields| %>
       Create a new ingredient: <%= ingredient_fields.text_field :name %><br>
     <% end %>
-  <% end %>
+  <% end %> -->
 
   <%= f.submit %>
 <% end %>
