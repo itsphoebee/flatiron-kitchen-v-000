@@ -43,7 +43,7 @@ class IngredientsController < ApplicationController
   end
 
   def ingredient_params
-    params.require(:ingredient).permit(:ingredient_name)
+    params.require(:ingredient).permit(:name)
   end
 
 end
