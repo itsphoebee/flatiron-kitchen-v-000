@@ -6,7 +6,7 @@
 
   <% if !recipe.id.present? %>
     <%= f.fields_for :ingredients do |ingredient_fields| %>
-      Create a new ingredient: <%= ingredient_fields.text_field :name %><br>
+      Create a new ingredient: <%= ingredient_fields.text_field :name, placeholder:'name' %><br>
     <% end %>
   <% end %>
 
