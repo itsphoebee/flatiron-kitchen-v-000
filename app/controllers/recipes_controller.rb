@@ -15,6 +15,10 @@ class RecipesController < ApplicationController
     end
   end
 
+  def show
+    @recipe = Recipe.find(params[:id])
+  end
+
   private
 
   def recipe_params
