@@ -2,6 +2,7 @@
   <%=f.label :recipe_name %>:
   <%= f.text_field :recipe_name, placeholder: 'recipe_name'%> <br>
 
-  <%= f.collection_select(:ingredient_id, Ingredient.all, :id, :name)%>
+  <%= f.collection_select(:ingredient_id, Ingredient.all, :id, :name)%><br>
+
   <%= f.submit %>
 <% end %>
