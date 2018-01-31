@@ -31,7 +31,7 @@ class IngredientsController < ApplicationController
   def find_by_params_id
     Ingredient.find(params[:id])
   end
-  
+
   def ingredient_params
     params.require(:ingredient).permit(:ingredient_name)
   end
