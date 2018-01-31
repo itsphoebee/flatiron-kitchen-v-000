@@ -14,6 +14,8 @@ class IngredientsController < ApplicationController
     if Ingredient.all.find_by(name:ingredient_params[:name]).blank?
       @ingredient.save
       redirect_to ingredient_path(@ingredient)
+    else
+      redirect_to ingredients_path
     end
   end
 
