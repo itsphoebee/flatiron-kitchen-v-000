@@ -27,6 +27,16 @@ class IngredientsController < ApplicationController
     @ingredient = find_by_params_id
   end
 
+  def update
+    @ingredient = find_by_params_id
+    @ingredient.update(ingredient_params)
+    if @ingredient.valid?
+      redirect_to ingredient_path(@ingredient)
+    else
+      render :edit
+    end
+  end
+
   private
   def find_by_params_id
     Ingredient.find(params[:id])
