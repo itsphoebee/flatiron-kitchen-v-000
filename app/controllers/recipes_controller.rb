@@ -16,11 +16,11 @@ class RecipesController < ApplicationController
   end
 
   def show
-    @recipe = Recipe.find(params[:id])
+    @recipe = find_by_params_id
   end
 
   def edit
-    @recipe = Recipe.find(params[:id])
+    @recipe = find_by_params_id
   end
 
   def update
