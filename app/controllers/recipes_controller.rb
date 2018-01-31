@@ -2,7 +2,7 @@ class RecipesController < ApplicationController
 
   def new
     @recipe = Recipe.new
-    @recipe.ingredients.build(name)
+    @recipe.ingredients.build(name:name)
   end
 
   def create
