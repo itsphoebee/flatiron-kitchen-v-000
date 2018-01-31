@@ -13,6 +13,8 @@ class RecipesController < ApplicationController
     if @recipe.valid?
       @recipe.save
       redirect_to recipe_path(@recipe)
+    else
+      redirect_to recipes_path
     end
   end
 
