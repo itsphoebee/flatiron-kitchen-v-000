@@ -9,6 +9,7 @@ class IngredientsController < ApplicationController
   end
 
   def create
+    raise params.inspect
     @ingredient = Ingredient.new(ingredient_params)
     if Ingredient.all.find_by(name:ingredient_params[:name]).blank?
       @ingredient.save
